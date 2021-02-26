@@ -10,7 +10,6 @@
 
 html {
     scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 
 body {
@@ -371,6 +370,9 @@ footer .row a:hover {
 /*---*/
 
 @media only screen and (max-width: 1050px) {
+    html {
+	overflow-x: hidden;
+    }
     .topnav {
         height: 118px;
         border-bottom: 0;
