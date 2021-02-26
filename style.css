@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+   	overflow-x: hidden;
 }
 
 body {
@@ -429,4 +430,7 @@ footer .row a:hover {
     .media ul {
         padding-right: 40px;
     }
+    input[type="email"]{
+		width:85%;
+	}
 }
