@@ -83,7 +83,7 @@ body {
     border-left: 1px solid white;
     list-style-type: none;
     padding: 15px 35px;
-    /*gia mikrotera mono // isws prin htan 3.5vw*/
+    /*for smaller size 3.5vw*/
     text-align: center;
     background-color: deepskyblue;
     cursor: pointer;
@@ -397,6 +397,7 @@ footer .row a:hover {
     .account-menu ul li {
         height: 57px;
         width: 100%;
+        padding: 15px 3.5vw;
     }
     .side-menu {
         width: 34%;
