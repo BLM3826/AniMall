@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: theFont;
+    src: url('assets/fonts/SourceSerifPro-Regular.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f1f3f4;
+    font-family: theFont;
+}
+
+.topnav {
+    height: 57px;
+    top: 0;
+    position: sticky;
+    background: #fff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid deepskyblue;
+    z-index: 2;
+}
+
+#logo {
+    height: 40px;
+    margin: 7px 10px;
+}
+
+.search-form {
+    margin-top: 9px;
+    margin-left: 30px;
+    margin-bottom: 9px;
+    padding-right: 10vw;
+    padding-left: 5px;
+    border: 1px solid deepskyblue !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none !important;
+    width: 90%;
+    outline: none;
+}
+
+.input-text {
+    background: deepskyblue;
+    border: 6px solid deepskyblue;
+    margin: 9px 10px 9px 0;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    cursor: pointer;
+}
+
+.search-line {
+    display: inline-flex;
+    width: 60%;
+}
+
+.fa-search {
+    color: white;
+}
+
+.account-menu {
+    width: 40%;
+    height: 57px;
+    float: right;
+}
+
+.account-menu ul {
+    display: inline-flex;
+    float: right;
+}
+
+.account-menu ul li {
+    border-left: 1px solid white;
+    list-style-type: none;
+    padding: 15px 35px;
+    /*gia mikrotera mono // isws prin htan 3.5vw*/
+    text-align: center;
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+.account-menu ul li a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-shopping-cart {
+    margin-right: 5px;
+}
+
+.side-menu {
+    height: 79%;
+    width: 15%;
+    font-size: 14px;
+    float: left;
+    z-index: 2;
+    background-color: orange;
+}
+
+.side-menu ul {
+    margin-left: 10px;
+}
+
+.side-menu ul li {
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 10%;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.side-menu ul li:hover {
+    color: deepskyblue;
+    border-bottom: 2px solid deepskyblue;
+    padding-bottom: 10px;
+    margin-right: 10px;
+}
+
+.side-menu ul li ul {
+    display: none;
+    z-index: 10;
+    top: 77px;
+}
+
+.side-menu ul li:hover ul {
+    display: block;
+    height: 200px;
+    margin-left: 14%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background: #ececec;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.fa-caret-right {
+    margin-top: 4px;
+    margin-right: 12px;
+    float: right;
+}
+
+#open-btn,
+#close-btn {
+    font-size: 30px;
+    margin: 15px 10px 10px 10px;
+    color: deepskyblue;
+    cursor: pointer;
+    display: none;
+}
+
+#food,
+#toys,
+#clothes,
+#med {
+    height: 100px;
+}
+
+.slideshow {
+    width: 60%;
+    margin-left: 27%;
+    padding: 0 10px;
+}
+
+.carousel {
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicator {
+    z-index: 1 !important;
+}
+
+.categories {
+    margin: 50px 0;
+}
+
+.categories img {
+    width: 100%;
+    padding: 20px 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.categories img:hover {
+    transform: scale(1.1);
+}
+
+.categ-title {
+    background-color: deepskyblue;
+    color: #fff;
+    width: 180px;
+    padding: 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.categ-title h2 {
+    font-size: 24px;
+}
+
+.categ-title::after {
+    content: '';
+    border-top: 20px solid deepskyblue;
+    border-bottom: 20px solid deepskyblue;
+    border-right: 25px solid transparent;
+    position: absolute;
+    display: flex;
+    margin-top: -4px;
+    margin-left: 170px;
+}
+
+.categsecs {
+    margin: 50px;
+}
+
+.prod-top img {
+    width: 100%;
+}
+
+.overlay-up {
+    color: #fff;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    bottom: 5%;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.single-prod:hover .overlay-up {
+    opacity: 1;
+    margin-bottom: 5%;
+    transition: 0.5s;
+}
+
+.overlay-right {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70%;
+}
+
+.overlay-right .fa {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    padding: 7px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.overlay-right .btn-secondary {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.prod-top:hover .overlay-right {
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.5s;
+}
+
+.prod-bot .fa {
+    color: gold;
+    font-size: 10px;
+}
+
+.prod-bot h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.prod-bot h5 {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #222;
+    color: #fff;
+}
+
+footer h1 {
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.copyright {
+    margin-bottom: -80px;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+footer hr {
+    margin-top: 10px;
+    background-color: #ccc;
+}
+
+.media {
+    margin: -20px 0;
+}
+
+.media ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.aueb,
+.eclass,
+.fb,
+.insta {
+    margin-top: .625em;
+    width: 40px;
+    height: 40px;
+    opacity: .6;
+    border-radius: 25px;
+}
+
+.fb:hover,
+.insta:hover,
+.aueb:hover,
+.eclass:hover {
+    opacity: 1.0;
+}
+
+input[type="reset"] {
+    font-family: FontAwesome;
+    background-color: deepskyblue;
+    padding: 0 5px;
+    font-size: 19px;
+    border: none !important;
+}
+
+footer .row a:any-link {
+    text-decoration: none;
+    color: white;
+}
+
+footer .row a:hover {
+    color: deepskyblue;
+}
+
+
+/*---*/
+
+@media only screen and (max-width: 1050px) {
+    .topnav {
+        height: 118px;
+        border-bottom: 0;
+    }
+    #logo {
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+    }
+    .search-line {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .search-form,
+    .input-text {
+        margin-bottom: 20px;
+    }
+    .account-menu {
+        width: 100%;
+    }
+    .account-menu ul {
+        margin: 10px 0;
+        width: 100%;
+    }
+    .account-menu ul li {
+        height: 57px;
+        width: 100%;
+    }
+    .side-menu {
+        width: 34%;
+        z-index: 20;
+        top: 133px;
+        position: fixed;
+        font-size: 12px;
+        display: none;
+    }
+    .side-menu ul li ul {
+        top: 133px;
+    }
+    .side-menu ul li:hover ul {
+        margin-left: 32%;
+    }
+    #open-btn {
+        display: block;
+    }
+    #food,
+    #toys,
+    #clothes,
+    #med {
+        height: 150px;
+    }
+    .slideshow {
+        width: 100%;
+        margin-left: 0;
+    }
+    .media ul {
+        padding-right: 40px;
+    }
+}

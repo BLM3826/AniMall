@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>AniMall</title>
+    <link rel="icon" href="assets/logos/logo.png" type="image/gif" sizes="20x20">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="search-line">
+            <i class="fa fa-paw" id="open-btn" onclick="openside()"></i>
+            <i class="fa fa-times" id="close-btn" onclick="closeside()"></i>
+            <a href="#" onclick="javascript:play()">
+                <audio id="audio" src="assets/sounds/bark.wav"></audio>
+                <picture>
+                    <source media="(min-width: 1050px)" srcset="assets/logos/logo.png">
+                    <img id="logo" src="assets/logos/other_logo.png" alt="site-logo" width="40px">
+                </picture>
+            </a>
+            <input type="text" class="search-form">
+            <span class="input-text" onclick="sorry()"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="account-menu">
+            <ul>
+                <li><a href="#" onclick="javascript:sorry()"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+                <li><a href="#" onclick="javascript:sorry()">Sign Up</a></li>
+                <li><a href="#" onclick="javascript:sorry()">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <header>
+        <div class="side-menu" id="side-menu">
+            <ul>
+                <li>Dogs <i class="fa fa-caret-right"></i>
+                    <ul id="gettop">
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#toys">Accessories</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+                <li>Cats <i class="fa fa-caret-right"></i>
+                    <ul id="gettop1">
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#toys">Accessories</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+                <li>Hamsters <i class="fa fa-caret-right"></i>
+                    <ul id="gettop2">
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#toys">Accessories</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+                <li>Birds <i class="fa fa-caret-right"></i>
+                    <ul id="gettop3">
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#toys">Accessories</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+                <li>Other <i class="fa fa-caret-right"></i>
+                    <ul id="gettop4">
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#toys">Accessories</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="slideshow">
+            <div id="slideshow" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="assets/low/birdboxyellow.jpg" class="d-block w-100">
+                            <img src="assets/high/birdboxyellow.jpg" class="d-block w-100" alt="S1">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="assets/low/cattoy.jpg" class="d-block w-100">
+                            <img src="assets/high/cattoy.jpg" class="d-block w-100" alt="S2">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="assets/low/foodham.jpg" class="d-block w-100">
+                            <img src="assets/high/foodham.jpg" class="d-block w-100" alt="S3">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="assets/low/dogtoyfris.jpg" class="d-block w-100">
+                            <img src="assets/high/dogtoyfris.jpg" class="d-block w-100" alt="S4">
+                        </picture>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                </ol>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#food">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="assets/low/foodham.jpg">
+                                    <img src="assets/high/foodham.jpg" alt="pic1">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Food</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#toys">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="assets/low/birdtoy.jpg">
+                                    <img src="assets/high/birdtoy.jpg" alt="pic1">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Accessories</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#clothes">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="assets/low/dogclothes.jpg">
+                                    <img src="assets/high/dogclothes.jpg" alt="pic2">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Clothes</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#med">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="assets/low/dogmed.jpg">
+                                    <img src="assets/high/dogmed.jpg" alt="pic3">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Medical</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="categsecs">
+            <div class="container">
+                <div id="food"></div>
+                <div class="categ-title">
+                    <h2>Food</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogfoodbone.jpg">
+                                <img src="assets/high/dogfoodbone.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Dog Food Bone</h3>
+                            <h5>6.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogfood.jpg">
+                                <img src="assets/high/dogfood.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Food</h3>
+                            <h5>15.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/foodham.jpg">
+                                <img src="assets/high/foodham.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Hamster Food</h3>
+                            <h5>9.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/birdtoy.jpg">
+                                <img src="assets/high/birdtoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                    <i class="fa fa-credit-card"></i>
+                                </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                    <i class="fa fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Bird Food Balls</h3>
+                            <h5>5.99€</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categsecs">
+            <div class="container">
+                <div id="toys"></div>
+                <div class="categ-title">
+                    <h2>Accessories</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogtoy.jpg">
+                                <img src="assets/high/dogtoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Toy Spidey</h3>
+                            <h5>9.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogtoybone.jpg">
+                                <img src="assets/high/dogtoybone.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Dog Toy Bone</h3>
+                            <h5>7.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogtoyfris.jpg">
+                                <img src="assets/high/dogtoyfris.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Toy Frisbee</h3>
+                            <h5>11.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogclothes.jpg">
+                                <img src="assets/high/dogclothes.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Dog Toy Banana</h3>
+                            <h5>4.99€</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/birdboxtrees.jpg">
+                                <img src="assets/high/birdboxtrees.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Bird House Round</h3>
+                            <h5>18.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/birdboxwood.jpg">
+                                <img src="assets/high/birdboxwood.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Bird House Square</h3>
+                            <h5>13.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/birdboxyellow.jpg">
+                                <img src="assets/high/birdboxyellow.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Bird House Yellow</h3>
+                            <h5>21.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/birdtoy.jpg">
+                                <img src="assets/high/birdtoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Bird Toy</h3>
+                            <h5>4.99€</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/cattoy.jpg">
+                                <img src="assets/high/cattoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Cat Toy Ball</h3>
+                            <h5>8.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/cattoyhigh.jpg">
+                                <img src="assets/high/cattoyhigh.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Cat Hanging Toy</h3>
+                            <h5>11.99€</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/catbag.jpg">
+                                <img src="assets/high/catbag.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Bag for Cat</h3>
+                            <h5>29.99€</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categsecs">
+            <div class="container">
+                <div id="clothes"></div>
+                <div class="categ-title">
+                    <h2>Clothes</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogclothes.jpg">
+                                <img src="assets/high/dogclothes.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Dog Banana Clothes</h3>
+                            <h5>19.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogmask.jpg">
+                                <img src="assets/high/dogmask.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Mask</h3>
+                            <h5>4.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/catclothes.jpg">
+                                <img src="assets/high/catclothes.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Cat OldStyle Clothes</h3>
+                            <h5>14.99€</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categsecs">
+            <div class="container">
+                <div id="med"></div>
+                <div class="categ-title">
+                    <h2>Medical</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogmask.jpg">
+                                <img src="assets/high/dogmask.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Mask</h3>
+                            <h5>4.99€</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="assets/low/dogmed.jpg">
+                                <img src="assets/high/dogmed.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="conf()" type="button" class="btn btn-secondary" title="Αγορά">
+                                <i class="fa fa-credit-card"></i>
+                            </button><br>
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Προσθήκη στο Καλάθι">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Medical Collar</h3>
+                            <h5>14.99€</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container t-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Useful Info</h1>
+                    <p>Upcoming Discounts</p>
+                    <p>Return Policy</p>
+                    <p><a href="javascript:priv()">Privacy Policy</a></p>
+                    <p>Terms of Use</p>
+                </div>
+                <div class="col-md-4">
+                    <h1>About Us</h1>
+                    <p>
+                        We are a small company that loves<br> to see animals happy and well-treated.<br> Our products are 100% original<br> and safe for your pet.<br><br> Thank you for selecting us!
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h1>Find Us on:</h1>
+                    <div class="media">
+                        <ul>
+                            <li>
+                                <a href="https://www.aueb.gr/" target="_blank">
+                                    <img src="https://upload.wikimedia.org/wikipedia/el/9/94/Athens_University_of_Economics_and_Business_%28logo%29.png" alt="AUEB Logo" class="aueb"></a>
+                            </li>
+                            <li>
+                                <a href="https://eclass.aueb.gr/" target="_blank">
+                                    <img src="assets/logos/eclass.png" alt="Eclass Logo" class="eclass"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/auebgreece" target="_blank">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/120px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Logo" class="fb"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/aueb.gr/?hl=el" target="_blank">
+                                    <img src="https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw" alt="Instagram Logo" class="insta"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1>Subscribe to our Newsletter:</h1>
+                    <form action="">
+                        <input type="email" placeholder="Email address" name="mail" size="30px">
+                        <input type="reset" value="&#xf1d8;">
+                        <!--just to erase the email-->
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">©2020 AniMall®</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
