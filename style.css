@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-   overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 body {
@@ -84,7 +84,7 @@ body {
     border-left: 1px solid white;
     list-style-type: none;
     padding: 15px 35px;
-    /*for smaller size 3.5vw*/
+    /*gia mikrotera mono // isws prin htan 3.5vw*/
     text-align: center;
     background-color: deepskyblue;
     cursor: pointer;
@@ -398,7 +398,7 @@ footer .row a:hover {
     .account-menu ul li {
         height: 57px;
         width: 100%;
-        padding: 15px 3.5vw;
+		padding: 15px 3.5vw;
     }
     .side-menu {
         width: 34%;
@@ -430,7 +430,8 @@ footer .row a:hover {
     .media ul {
         padding-right: 40px;
     }
-    input[type="email"]{
+	input[type="email"]{
 		width:85%;
 	}
+		
 }
