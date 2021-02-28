@@ -429,11 +429,15 @@ footer .row a:hover {
         width: 100%;
         margin-left: 0;
     }
+    footer {
+	margin-bottom: 80px;
+    }
+	
     .media ul {
         padding-right: 40px;
     }
-	input[type="email"]{
-		width:85%;
-	}
+    input[type="email"]{
+	width:85%;
+    }
 		
 }
