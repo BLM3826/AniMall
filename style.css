@@ -370,8 +370,8 @@ footer .row a:hover {
 /*---*/
 
 @media only screen and (max-width: 1050px) {
-    html, body, .site {
-	overflow-x: hidden;
+    .site {
+	overflow: hidden;
     }
     .topnav {
         height: 118px;
